@@ -1,0 +1,8 @@
+---
+title: A minimal R Markdown example
+date: August 15, 2016
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---

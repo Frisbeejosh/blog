@@ -1,0 +1,105 @@
+---
+title: Day 11 of NTRESS 6000
+date: October 1, 2024
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+## today we were working on data import, export, and conversion between data types! 
+
+**first things first, we need to load tidyverse** <br>
+<br>
+``` {r}
+library(tidyverse)
+
+coronavirus <- read_csv('https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv')
+```
+
+<br> 
+<br> 
+**we have been working with this coronavirus dataset from [here](https://github.com/owid/covid-19-data)** <br> 
+
+``` {r}
+coronavirus |> 
+  filter(cases > 0) |> 
+  group_by(date,type) |> 
+  summarise(cases=sum(cases)) |> 
+  ggplot() + 
+  geom_col(aes(date,cases,fill =type))
+```
+<br> 
+<br> 
+**this is what our data looks like** <br> 
+<br> 
+``` {r}
+head(coronavirus)
+```
+
+
+<br> 
+**lets filter this raw dataset to keep only the `date`, `country`,`province`,`type`,and `cases` <br> 
+we then are piping that dataframe into filter to only keep cases on january 3rd, 2021 
+
+``` {r}
+coronavirus |> 
+  select(date,country,province,type,cases) |> 
+  filter(date == "2021-01-03")
+```
+
+## okay i got too lazy with marking up this file so deal with some dirty code below!! 
+
+``` {r}
+lotr <- read_csv("https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/lotr_tidy.csv")
+```
+
+``` {r}
+write_csv(lotr, file = "lotr_tidy.csv")
+
+lotr <- read_csv("lotr_tidy.csv")
+```
+
+
+```{r}
+lotr <- read_csv("lotr_tidy.csv", skip = 2)
+```
+
+
+
+``` {r}
+library(googlesheets4) #install.packages("googlesheets4")
+
+gs4_deauth()
+lotr_gs <- read_sheet("https://docs.google.com/spreadsheets/d/1X98JobRtA3JGBFacs_JSjiX-4DPQ0vZYtNl_ozqF6IE/edit#gid=754443596")
+```
+
+
+``` {r}
+#will help turn whatever you have into a number - helpful if your data isnt read as numeric
+parse_double("1,23", locale = locale(decimal_mark = ","))
+```
+
+
+``` {r}
+students <- read_csv("https://pos.it/r4ds-students-csv", na = c("","N/A"))
+```
+
+
+``` {r}
+students |> 
+  rename(
+    student_id = `Student ID`,
+    full_name = `Full Name`)
+```
+
+
+``` {r}
+library(janitor) #install.packages("janitor")
+
+students |> 
+  clean_names(case="lower_upper") |> 
+  mutate(
+  age = parse_number(ifelse(age == "five", 5, age)))
+```
+

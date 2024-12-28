@@ -1,0 +1,18 @@
+---
+title: semester reflection
+date: December 23, 2024
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+### Well folks, the semester just wrapped up last week. Another one in the books! It is wild that I am going into my fourth semester in my PhD. I have learned a lot and wanted to reflect on the things that have stuck with me:
+
+- Burn out will happen, with that said, when you are in the flow, seize the day!!!
+  
+- tackle the hardest things (either mentally or time wise) on your to-do list at the begining of the day, then when you are tired later in the day, cruise on the busy items
+  
+- PhDs are marathons, not races. Spend lots of time just thinking! While it might feel like wasted time, these moments spent are where I have seen the most growth in my research
+
+### I am looking forward to the new year... most posts on the way

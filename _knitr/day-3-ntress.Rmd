@@ -1,0 +1,25 @@
+---
+title: day 3 of NTRESS 6100
+date: September 9, 2024
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+today we are getting set up with git and github to be able to do version control  
+here are a couple of terms that we have talked about today <br>
+
+## repository
+<br>
+syn of directory, where files that git holds  
+<br>
+
+## diff
+<br>
+the difference between two versions of a file or set of files
+<br>
+
+## commit
+<br>
+a snapshot of all files in the repo at a certain moment

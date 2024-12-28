@@ -1,0 +1,21 @@
+---
+title: check out some of my photos
+date: August 8, 2024
+tags: hobbies
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+## I recently got a Canon PowerShot and S95 from my [favorite place](https://ithacareuse.org/shop/?gad_source=1&gclid=Cj0KCQjw_sq2BhCUARIsAIVqmQtn0q3gZ-TmBKtuz2rQFoIKwMLjq03jthgzTbZDR1ROq27k3xMeYW0aAjigEALw_wcB)! Check out my photos from the camera below!
+
+<br>
+<br>
+
+<div style="text-align: center;">
+  <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/201353265@N04/albums/72177720319965778" title="getting my bearings under me">
+    <img src="https://live.staticflickr.com/65535/53962035186_df056d3bb0_z.jpg" width="480" height="640" alt="getting my bearings under me"/>
+  </a>
+  <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>

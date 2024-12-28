@@ -1,0 +1,16 @@
+---
+title: check out my talk at MONOCOTS VII 
+date: September 9, 2024
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+### check out my talk at the 7th International Conference on Comparative Biology of Monocotyledons
+
+<br>
+
+<div style="text-align: center;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/4JbVSALpgOc?si=lcfW92fHhJtZgfrN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>

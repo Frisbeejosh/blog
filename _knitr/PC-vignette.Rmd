@@ -1,0 +1,12 @@
+---
+title: How to capture population structure with PCA?
+date: December 23, 2024
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+## Check out this cool tutorial on why pruning and removing long-range Linkage Disequilibrium (LD) are two important steps before computing PCs to capture population structure 
+ 
+<iframe src="https://privefl.github.io/bigsnpr/articles/how-to-PCA.html" seamless width="100%" height="800"></iframe>
