@@ -33,7 +33,7 @@ check out my indie collection
 <br>
 <br>
 
-<img src="/assets/img/hotdish.jpeg" alt="look at this shiiiiii yoooooo" width="600"/>
+<img src="/images/hotdish.jpeg" alt="look at this shiiiiii yoooooo" width="600"/>
 
 <br>
 <br>
