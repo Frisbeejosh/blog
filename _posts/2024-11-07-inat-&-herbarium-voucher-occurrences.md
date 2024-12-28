@@ -23,7 +23,7 @@ Occurrence Download</a></strong></p>
 </div>
 <br>
 <div style="display: flex; justify-content: center;">
-<pre><code>&lt;iframe src=&quot;html/nutans_herb_inat.html&quot; width=&quot;100%&quot; height=&quot;600px&quot;&gt;&lt;/iframe&gt;</code></pre>
+<pre><code>&lt;iframe src=&quot;{{ site.baseurl }}/html/nutans_herb_inat.html&quot; width=&quot;100%&quot; height=&quot;600px&quot;&gt;&lt;/iframe&gt;</code></pre>
 </div>
 </div>
 <div id="all-of-catopsis-occurances" class="section level1">
@@ -31,7 +31,7 @@ Occurrence Download</a></strong></p>
 </div>
 <br>
 <div style="display: flex; justify-content: center;">
-<pre><code>&lt;iframe src=&quot;html/catopsis_interactive.html&quot; width=&quot;100%&quot; height=&quot;600px&quot;&gt;&lt;/iframe&gt;</code></pre>
+<pre><code>&lt;iframe src=&quot;{{ site.baseurl }}/html/catopsis_interactive.html&quot; width=&quot;100%&quot; height=&quot;600px&quot;&gt;&lt;/iframe&gt;</code></pre>
 </div>
 </div>
 </section>
