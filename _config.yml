@@ -29,11 +29,11 @@ baseurl:
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: mailto:jmf425@cornell.edu
+  email: jmf425@cornell.edu
   facebook:
-  flickr: photos/201353265@N04/
-  github: Frisbeejosh
-  instagram: botany.baller/
+  flickr:
+  github:
+  instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
