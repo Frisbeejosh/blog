@@ -7,7 +7,7 @@ output:
     highlight: github
 ---
 
-### Well folks, it has been a minute since I have posted here. Things are going well here in Ithaca. I am taking (advanced pop gen)[https://classes.cornell.edu/browse/roster/SP25/class/BIOCB/6910] with (April Wei)[https://aprilweilab.github.io/]
+### Well folks, it has been a minute since I have posted here. Things are going well here in Ithaca. I am taking [advanced pop gen](https://classes.cornell.edu/browse/roster/SP25/class/BIOCB/6910) with [April Wei](https://aprilweilab.github.io/)
 
 ### The class has been incredibly theroetical so far which has thrown me for a loop but I am enjoying pushing my horizions!
 
