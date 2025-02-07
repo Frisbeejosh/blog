@@ -1,0 +1,16 @@
+---
+title: Two months into the second semester
+date: Feburary 7, 2025
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+### Well folks, it has been a minute since I have posted here. Things are going well here in Ithaca. I am taking (advanced pop gen)[https://classes.cornell.edu/browse/roster/SP25/class/BIOCB/6910] with (April Wei)[https://aprilweilab.github.io/]
+
+### The class has been incredibly theroetical so far which has thrown me for a loop but I am enjoying pushing my horizions!
+
+### Soon we will be applying the equations to real life scenerios and running forward and backward simulations which I am looking forward to!
+
+### I am looking forward to warm weather... most posts (and simulations!) on the way
