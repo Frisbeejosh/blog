@@ -1,6 +1,6 @@
 ---
 title: Two months into the second semester
-date: Feburary 7, 2025
+date: February 7, 2025
 output: 
   prettydoc::html_pretty:
     theme: cayman

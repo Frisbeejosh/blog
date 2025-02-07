@@ -1,46 +1,12 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+---
+title: "Two months into the second semester"
 
 
-<meta name="date" content="2025-02-07" />
+date: "February 7, 2025"
+layout: post
+---
 
-<title>Two months into the second semester</title>
-
-<script src="time_flies_files/header-attrs-2.29/header-attrs.js"></script>
-
-
-
-
-
-<link rel="stylesheet" href="time_flies_files/style.css" type="text/css" />
-
-
-
-
-
-</head>
-
-<body>
-
-
-
-
-<section class="page-header">
-<h1 class="title toc-ignore project-name">Two months into the second
-semester</h1>
-<h4 class="date project-date">February 7, 2025</h4>
-</section>
-
-
+<script src="{{ site.url }}{{ site.baseurl }}/knitr_files/time_flies_files/header-attrs-2.29/header-attrs.js"></script>
 
 <section class="main-content">
 <div
@@ -73,21 +39,3 @@ class="section level3">
 on the way</h3>
 </div>
 </section>
-
-
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
-</body>
-</html>
