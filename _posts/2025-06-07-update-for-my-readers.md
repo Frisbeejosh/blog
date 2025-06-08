@@ -1,0 +1,27 @@
+---
+title: "update for my readers"
+
+
+date: "June 7, 2025"
+layout: post
+---
+
+<script src="{{ site.url }}{{ site.baseurl }}/knitr_files/update_for_readers_files/header-attrs-2.29/header-attrs.js"></script>
+
+<section class="main-content">
+<p>There are many days where I as a botanist do not think I will ever be
+as famous actors become (or even zoologists for that matter). No matter
+how hard botany baller tries, even if he were to get timberwolves
+courtside seats, nobody would care about a damn botanist like they would
+about my mans timotee chalemet.</p>
+<p>Anyways, the class act davey, a lad i am greatful to call my friend
+reminded me that it has been a minute since i have written something on
+my blog.</p>
+<p>Many of things have happened in the past months since the dark dog
+days of feburary. First and foremorst, I am now a PhD canidate! Whilst a
+stressful time preparing for the exam, I have left with curisoty and
+drive that I am cultivating.</p>
+<p>This is the first post of many in the coming week/weeks. I hope to
+share some results from the various projects I am working on as well as
+my musical and photographic pursuits.</p>
+</section>
