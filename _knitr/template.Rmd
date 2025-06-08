@@ -6,3 +6,5 @@ output:
     theme: cayman
     highlight: github
 ---
+
+prettyjekyll::FormatPost("_knitr/knitr-minimal.Rmd")
