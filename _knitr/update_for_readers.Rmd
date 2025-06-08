@@ -10,12 +10,18 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-There are many days where I as a botanist do not think I will ever be as famous actors become (or even zoologists for that matter). No matter how hard botany baller tries, even if he were to get timberwolves courtside seats, nobody would care about a damn botanist like they would about my mans timotee chalemet.  
+There are many days where I as a botanist do not think I will ever be as famous actors become (or even zoologists for that matter). No matter how hard [botany baller](https://www.instagram.com/botany.baller/?hl=en) tries, even if he were to get timberwolves courtside seats, nobody would care about a damn botanist like they would about my mans timothee chalamet.  
 
-Anyways, the class act davey, a lad i am greatful to call my friend reminded me that it has been a minute since i have written something on my blog.  
+Anyways, the class act davey, a lad i am grateful to call my friend reminded me that it has been a minute since i have written something on my blog.  
 
-Many of things have happened in the past months since the dark dog days of feburary. First and foremorst, I am now a PhD canidate! Whilst a stressful time preparing for the exam, I have left with curisoty and drive that I am cultivating.  
+Many of things have happened in the past months since the dark dog days of february. First and foremost, I am now a [PhD candidate!](https://blogs.cornell.edu/specht/2025/05/30/justin-and-josh-advance-to-candidacy/) Whilst a stressful time preparing for the exam, I have left with curiosity and drive that I am cultivating.  
 
-This is the first post of many in the coming week/weeks. I hope to share some results from the various projects I am working on as well as my musical and photographic pursuits. 
+This is the first post of many in the coming week/weeks. I hope to share some results from the various projects I am working on as well as my [musical](https://soundcloud.com/teaman97) and photographic pursuits. 
+
+![crude meme but i cant help but laugh...we need more botany memes! ](images/pinus_meme.JPG)
+
+![print from my DC travels](images/darkroom_print.jpeg)
+
+
 
 
