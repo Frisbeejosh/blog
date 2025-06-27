@@ -33,8 +33,7 @@ check out my indie collection
 <br>
 <br>
 
-<img src="/images/hotdish.jpeg" alt="look at this shiiiiii yoooooo" width="600"/>
-
+![look at this shiiiiii yoooooo](../images/hotdish.jpeg)
 <br>
 <br>
 
