@@ -10,18 +10,13 @@ output:
 ## today we were working on data import, export, and conversion between data types! 
 
 **first things first, we need to load tidyverse** <br>
-<br>
-``` {r}
+``` {r,message = FALSE,warning = FALSE}
 library(tidyverse)
 
 coronavirus <- read_csv('https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv')
 ```
-
-<br> 
-<br> 
 **we have been working with this coronavirus dataset from [here](https://github.com/owid/covid-19-data)** <br> 
-
-``` {r}
+``` {r,message = FALSE}
 coronavirus |> 
   filter(cases > 0) |> 
   group_by(date,type) |> 
@@ -29,20 +24,17 @@ coronavirus |>
   ggplot() + 
   geom_col(aes(date,cases,fill =type))
 ```
-<br> 
-<br> 
+
 **this is what our data looks like** <br> 
-<br> 
-``` {r}
+``` {r,message = FALSE}
 head(coronavirus)
 ```
-
 
 <br> 
 **lets filter this raw dataset to keep only the `date`, `country`,`province`,`type`,and `cases` <br> 
 we then are piping that dataframe into filter to only keep cases on january 3rd, 2021 
 
-``` {r}
+``` {r,message = FALSE}
 coronavirus |> 
   select(date,country,province,type,cases) |> 
   filter(date == "2021-01-03")
@@ -50,24 +42,24 @@ coronavirus |>
 
 ## okay i got too lazy with marking up this file so deal with some dirty code below!! 
 
-``` {r}
+``` {r,message = FALSE}
 lotr <- read_csv("https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/lotr_tidy.csv")
 ```
 
-``` {r}
+``` {r,message = FALSE}
 write_csv(lotr, file = "lotr_tidy.csv")
 
 lotr <- read_csv("lotr_tidy.csv")
 ```
 
 
-```{r}
+```{r,message = FALSE}
 lotr <- read_csv("lotr_tidy.csv", skip = 2)
 ```
 
 
 
-``` {r}
+``` {r,message = FALSE}
 library(googlesheets4) #install.packages("googlesheets4")
 
 gs4_deauth()
@@ -75,18 +67,18 @@ lotr_gs <- read_sheet("https://docs.google.com/spreadsheets/d/1X98JobRtA3JGBFacs
 ```
 
 
-``` {r}
+``` {r,message = FALSE}
 #will help turn whatever you have into a number - helpful if your data isnt read as numeric
 parse_double("1,23", locale = locale(decimal_mark = ","))
 ```
 
 
-``` {r}
+``` {r,message = FALSE}
 students <- read_csv("https://pos.it/r4ds-students-csv", na = c("","N/A"))
 ```
 
 
-``` {r}
+``` {r,message = FALSE}
 students |> 
   rename(
     student_id = `Student ID`,
@@ -94,7 +86,7 @@ students |>
 ```
 
 
-``` {r}
+``` {r,message = FALSE,warning = FALSE}
 library(janitor) #install.packages("janitor")
 
 students |> 

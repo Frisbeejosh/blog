@@ -20,6 +20,7 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -140,45 +141,23 @@ id="today-we-were-working-on-data-import-export-and-conversion-between-data-type
 class="section level2">
 <h2>today we were working on data import, export, and conversion between
 data types!</h2>
-<p><strong>first things first, we need to load tidyverse</strong> <br>
+<p><strong>first things first, we need to load tidyverse</strong>
 <br></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
-<pre><code>## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-## ✔ dplyr     1.1.4     ✔ readr     2.1.5
-## ✔ forcats   1.0.0     ✔ stringr   1.5.1
-## ✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-## ✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-## ✔ purrr     1.0.2     
-## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()
-## ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>coronavirus <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv&#39;</span>)</span></code></pre></div>
-<pre><code>## Rows: 919308 Columns: 15
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr  (8): province, country, type, iso2, iso3, combined_key, continent_name,...
-## dbl  (6): lat, long, cases, uid, code3, population
-## date (1): date
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<p><br> <br> <strong>we have been working with this coronavirus dataset
-from <a href="https://github.com/owid/covid-19-data">here</a></strong>
-<br></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>coronavirus <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">filter</span>(cases <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="fu">group_by</span>(date,type) <span class="sc">|&gt;</span> </span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">cases=</span><span class="fu">sum</span>(cases)) <span class="sc">|&gt;</span> </span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(date,cases,<span class="at">fill =</span>type))</span></code></pre></div>
-<pre><code>## `summarise()` has grouped output by &#39;date&#39;. You can override using the
-## `.groups` argument.</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>coronavirus <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&#39;https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv&#39;</span>)</span></code></pre></div>
+<p><strong>we have been working with this coronavirus dataset from <a
+href="https://github.com/owid/covid-19-data">here</a></strong> <br></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>coronavirus <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>  <span class="fu">filter</span>(cases <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  <span class="fu">group_by</span>(date,type) <span class="sc">|&gt;</span> </span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">cases=</span><span class="fu">sum</span>(cases)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="fu">aes</span>(date,cases,<span class="at">fill =</span>type))</span></code></pre></div>
 <p><img
-src="day_11_ntress_files/figure-html/unnamed-chunk-2-1.png" /><!-- -->
-<br> <br> <strong>this is what our data looks like</strong> <br>
-<br></p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">head</span>(coronavirus)</span></code></pre></div>
+src="day_11_ntress_files/figure-html/unnamed-chunk-2-1.png" /><!-- --></p>
+<p><strong>this is what our data looks like</strong> <br></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">head</span>(coronavirus)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 15
 ##   date       province country   lat  long type     cases   uid iso2  iso3  code3
 ##   &lt;date&gt;     &lt;chr&gt;    &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;
@@ -195,9 +174,9 @@ src="day_11_ntress_files/figure-html/unnamed-chunk-2-1.png" /><!-- -->
 <code>country</code>,<code>province</code>,<code>type</code>,and
 <code>cases</code> <br> we then are piping that dataframe into filter to
 only keep cases on january 3rd, 2021</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>coronavirus <span class="sc">|&gt;</span> </span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>  <span class="fu">select</span>(date,country,province,type,cases) <span class="sc">|&gt;</span> </span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">==</span> <span class="st">&quot;2021-01-03&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>coronavirus <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  <span class="fu">select</span>(date,country,province,type,cases) <span class="sc">|&gt;</span> </span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="fu">filter</span>(date <span class="sc">==</span> <span class="st">&quot;2021-01-03&quot;</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 852 × 5
 ##    date       country        province                         type      cases
 ##    &lt;date&gt;     &lt;chr&gt;          &lt;chr&gt;                            &lt;chr&gt;     &lt;dbl&gt;
@@ -218,57 +197,23 @@ id="okay-i-got-too-lazy-with-marking-up-this-file-so-deal-with-some-dirty-code-b
 class="section level2">
 <h2>okay i got too lazy with marking up this file so deal with some
 dirty code below!!</h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>lotr <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/lotr_tidy.csv&quot;</span>)</span></code></pre></div>
-<pre><code>## Rows: 18 Columns: 4
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr (3): Film, Race, Gender
-## dbl (1): Words
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">write_csv</span>(lotr, <span class="at">file =</span> <span class="st">&quot;lotr_tidy.csv&quot;</span>)</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>lotr <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;lotr_tidy.csv&quot;</span>)</span></code></pre></div>
-<pre><code>## Rows: 18 Columns: 4
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr (3): Film, Race, Gender
-## dbl (1): Words
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a>lotr <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;lotr_tidy.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">2</span>)</span></code></pre></div>
-<pre><code>## Rows: 16 Columns: 4
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr (3): The Fellowship Of The Ring, Hobbit, Female
-## dbl (1): 14
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">library</span>(googlesheets4) <span class="co">#install.packages(&quot;googlesheets4&quot;)</span></span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="fu">gs4_deauth</span>()</span>
-<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>lotr_gs <span class="ot">&lt;-</span> <span class="fu">read_sheet</span>(<span class="st">&quot;https://docs.google.com/spreadsheets/d/1X98JobRtA3JGBFacs_JSjiX-4DPQ0vZYtNl_ozqF6IE/edit#gid=754443596&quot;</span>)</span></code></pre></div>
-<pre><code>## ✔ Reading from &quot;LOTR&quot;.</code></pre>
-<pre><code>## ✔ Range &#39;tidy&#39;.</code></pre>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="co">#will help turn whatever you have into a number - helpful if your data isnt read as numeric</span></span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="fu">parse_double</span>(<span class="st">&quot;1,23&quot;</span>, <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">decimal_mark =</span> <span class="st">&quot;,&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>lotr <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/jennybc/lotr-tidy/master/data/lotr_tidy.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">write_csv</span>(lotr, <span class="at">file =</span> <span class="st">&quot;lotr_tidy.csv&quot;</span>)</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>lotr <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;lotr_tidy.csv&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>lotr <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;lotr_tidy.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">library</span>(googlesheets4) <span class="co">#install.packages(&quot;googlesheets4&quot;)</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="fu">gs4_deauth</span>()</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>lotr_gs <span class="ot">&lt;-</span> <span class="fu">read_sheet</span>(<span class="st">&quot;https://docs.google.com/spreadsheets/d/1X98JobRtA3JGBFacs_JSjiX-4DPQ0vZYtNl_ozqF6IE/edit#gid=754443596&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co">#will help turn whatever you have into a number - helpful if your data isnt read as numeric</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">parse_double</span>(<span class="st">&quot;1,23&quot;</span>, <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">decimal_mark =</span> <span class="st">&quot;,&quot;</span>))</span></code></pre></div>
 <pre><code>## [1] 1.23</code></pre>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://pos.it/r4ds-students-csv&quot;</span>, <span class="at">na =</span> <span class="fu">c</span>(<span class="st">&quot;&quot;</span>,<span class="st">&quot;N/A&quot;</span>))</span></code></pre></div>
-<pre><code>## Rows: 6 Columns: 5
-## ── Column specification ────────────────────────────────────────────────────────
-## Delimiter: &quot;,&quot;
-## chr (4): Full Name, favourite.food, mealPlan, AGE
-## dbl (1): Student ID
-## 
-## ℹ Use `spec()` to retrieve the full column specification for this data.
-## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>students <span class="sc">|&gt;</span> </span>
-<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
-<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>    <span class="at">student_id =</span> <span class="st">`</span><span class="at">Student ID</span><span class="st">`</span>,</span>
-<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a>    <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>students <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://pos.it/r4ds-students-csv&quot;</span>, <span class="at">na =</span> <span class="fu">c</span>(<span class="st">&quot;&quot;</span>,<span class="st">&quot;N/A&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>students <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>  <span class="fu">rename</span>(</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>    <span class="at">student_id =</span> <span class="st">`</span><span class="at">Student ID</span><span class="st">`</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>    <span class="at">full_name =</span> <span class="st">`</span><span class="at">Full Name</span><span class="st">`</span>)</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 5
 ##   student_id full_name        favourite.food     mealPlan            AGE  
 ##        &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;chr&gt;
@@ -278,16 +223,12 @@ dirty code below!!</h2>
 ## 4          4 Leon Rossini     Anchovies          Lunch only          &lt;NA&gt; 
 ## 5          5 Chidiegwu Dunkel Pizza              Breakfast and lunch five 
 ## 6          6 Güvenç Attila    Ice cream          Lunch only          6</code></pre>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="fu">library</span>(janitor) <span class="co">#install.packages(&quot;janitor&quot;)</span></span></code></pre></div>
-<pre><code>## 
-## Attaching package: &#39;janitor&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     chisq.test, fisher.test</code></pre>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a>students <span class="sc">|&gt;</span> </span>
-<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a>  <span class="fu">clean_names</span>(<span class="at">case=</span><span class="st">&quot;lower_upper&quot;</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">parse_number</span>(<span class="fu">ifelse</span>(age <span class="sc">==</span> <span class="st">&quot;five&quot;</span>, <span class="dv">5</span>, age)))</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">library</span>(janitor) <span class="co">#install.packages(&quot;janitor&quot;)</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>students <span class="sc">|&gt;</span> </span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>  <span class="fu">clean_names</span>(<span class="at">case=</span><span class="st">&quot;lower_upper&quot;</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">parse_number</span>(<span class="fu">ifelse</span>(age <span class="sc">==</span> <span class="st">&quot;five&quot;</span>, <span class="dv">5</span>, age)))</span></code></pre></div>
 <pre><code>## # A tibble: 6 × 5
 ##   studentID fullNAME         favouriteFOOD      mealPLAN              age
 ##       &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;              &lt;chr&gt;               &lt;dbl&gt;

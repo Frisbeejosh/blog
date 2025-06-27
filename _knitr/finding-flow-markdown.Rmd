@@ -7,6 +7,9 @@ output:
     highlight: github
 ---
 
+```{r, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, fig.width = 20, fig.height = 10)
+```
 # finding my flow with markdown
 
 ### inch my inch, row by row, gonna make my coding flow
@@ -17,13 +20,15 @@ I am in the class [Collaborative and Reproducible Data Science in R](https://git
 I hope that this will help me progress with my coding/programming skills while providing me with material to look back on during my journey.  
 
 Check out this plot that I made in R to help me compare the proportion of SNPs retained before and after filtering for LD.
-```{r echo=FALSE}
+```{r echo=FALSE,warning = FALSE}
 library(ggplot2)
 library(readr)
 
 # Load the data from the CSV file
-data <- read_csv("/Users/joshfelton/Desktop/tests/snps_filtered_test.csv", show_col_types = FALSE)
+data <- read_csv("/Users/joshfelton/Desktop/tests/tables/CORRECT_SNPS_after_filtering.csv", show_col_types = FALSE)
 
+
+data$proportion <- data$snps_after_filtering/data$fasta_charachters
 
 # Define custom colors for each dataset
 custom_colors <- c(
@@ -62,7 +67,10 @@ library(ggplot2)
 library(readr)
 
 # Load the data from the CSV file
-data <- read_csv("/Users/joshfelton/Desktop/tests/snps_filtered_test.csv")
+data <- read_csv("/Users/joshfelton/Desktop/tests/tables/CORRECT_SNPS_after_filtering.csv", show_col_types = FALSE)
+
+data$proportion <- data$snps_after_filtering/data$fasta_charachters
+
 
 # Define custom colors for each dataset
 custom_colors <- c(
