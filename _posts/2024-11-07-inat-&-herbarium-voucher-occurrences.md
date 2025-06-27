@@ -23,7 +23,7 @@ Occurrence Download</a></strong></p>
 </div>
 <br>
 <div style="display: flex; justify-content: center;">
-<p><iframe src="{{ site.url }}{{ site.baseurl }}/html/nutans_herb_inat.html" width="100%" height="600px"></iframe></p>
+<p><iframe src="{{ site.url }}{{ site.baseurl }}/html/nutans_herb_inat.html" width="200%" height="600px"></iframe></p>
 </div>
 </div>
 <div id="all-of-catopsis-occurances" class="section level1">
