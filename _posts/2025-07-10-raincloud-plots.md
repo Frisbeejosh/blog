@@ -18,6 +18,6 @@ r/bioinformatics: <br></p>
 <p>in the comments somebody mentioned using raincloud plots instead! I
 am about to go to the botany conference and give a poster and
 presentation – i def plan to use rainclouds instead of box plots!</p>
-<p>knitr::include_url(<a href="https://rpubs.com/rana2hin/raincloud"
-class="uri">https://rpubs.com/rana2hin/raincloud</a>)</p>
+<iframe src="https://rpubs.com/rana2hin/raincloud" width="100%" height="600px">
+</iframe>
 </section>
