@@ -1,0 +1,22 @@
+---
+title: 4H career exploration panel
+date: June 26, 2025
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(webshot2)
+```
+i was browsing on reddit and came across this post in r/bioinformatics: <br>
+
+![they got a point](../images/reddit_post.png)
+
+
+in the comments somebody mentioned using raincloud plots instead! I am about to go to the botany conference and give a poster and presentation -- i def plan to use rainclouds instead of box plots!
+
+knitr::include_url(https://rpubs.com/rana2hin/raincloud)
+
