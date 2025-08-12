@@ -1,0 +1,19 @@
+---
+title: late summer recap
+date: August 12, 2025
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+summer is starting to come to a close - I feel the energy of the townies preparing for all of the undergrads to come back. I also am feeling that sentiment. Anyways, looking back on the summer, I had the pleasure of finally submitting my rotation project for publication [check out the preprint here](https://www.biorxiv.org/content/10.1101/2025.07.09.663802v1). 
+<p align="center">
+  <img src="../images/first-shot-burn.jpg" alt="westport,ny">
+  <br>
+  westport, ny
+</p>
+I also just got back from the [BOTANY](http://2025.botanyconference.org) conference where I presented a poster titled *The power to resolve relationships: identifying incongruence and precision of reduced representation and genome-wide data in phylogenomics and population genomics* and a presentation titled *A Model for the Evolutionary Dynamics of Dioecy in Catopsis Griseb. (Bromeliaceae)*
