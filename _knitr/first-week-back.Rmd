@@ -1,0 +1,18 @@
+---
+title: first week of academic year
+date: August 27, 2025
+output: 
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+happy hump day and first week of the academic year! The buzz of the undergrads stoked to learn is a bit intoxicating. It is definitely making me motivated to think and write. I also have been energized on my photographer front. Last weekend I helped document [leslie rodgers](https://www.leslierogers.net) awesome performance at the [soil factory](https://thesoilfactory.org). 
+<p align="center">
+  <img src="../images/johannes_cheers.jpg" alt="a merry time">
+  <br>
+</p>
+
